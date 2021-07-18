@@ -44,7 +44,7 @@ def home():
 @application.route('/updateLike/<id>', methods=['GET'])
 def updateLike(id):
     quotes[int(id)][1] += 1
-    return "kunal"
+    return "OK"
 
 
 # Main Function
