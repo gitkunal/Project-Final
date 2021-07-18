@@ -1,0 +1,28 @@
+
+body {
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    margin-top: 200px;
+    text-align: center;
+    color:teal;
+    font-size: 20px;
+    font-family: Impact;;
+}
+
+#button1{
+    margin-left: 650px ;
+    text-align: center;
+    background-color:teal;
+    font-size: 20px;
+    color: black;
+}
+#CountDiv{
+    text-align: center;
+    font-size: 20px;
+    color: teal;
+    font-family: Impact;;
+}

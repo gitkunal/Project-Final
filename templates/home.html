@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Daily Quotes</title>
+        <meta charset="utf-8">
+        <style>
+body {
+    background-image: url({{ url_for ('static', filename = 'styles/background.jpg') }});
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    margin-top: 200px;
+    text-align: center;
+    color:teal;
+    font-size: 40px;
+    font-family: Impact;;
+}
+
+#button1{
+    text-align: center;
+    background-color:#FFA07A;
+    font-size: 20px;
+    color: black;
+}
+
+#CountDiv{
+    text-align: center;
+    font-size: 20px;
+    font-family: Impact;;
+}
+        </style>
+    </head>
+    <body >
+        <div id= {{ id }}>
+            <h1>
+                {{ quote }}
+            </h1>
+        </div>
+        <div align="center">
+            <button id = "button1" type="button">LIKE</button>
+        </div>
+        <div id="CountDiv">
+            <h3>
+                {{ likes }}
+            </h3>
+        </div>
+    </body>
+    <script>
+        const likebutton = document.getElementById("button1");
+        likebutton.addEventListener("click",update);
+
+        //function to reset whole program
+        function update(){
+            const countdiv = document.getElementById("CountDiv");
+            var count_value = parseInt(countdiv.textContent);
+            count_value += 1;
+            const newcountTxt = document.createElement("h3");
+            newcountTxt.appendChild(document.createTextNode(count_value));
+            while (countdiv.hasChildNodes()){
+                countdiv.removeChild(countdiv.lastChild);
+            };
+            countdiv.appendChild(newcountTxt);
+            let request = new XMLHttpRequest();
+            request.open("GET","http://localhost:5000/updateLike/"+{{ id }})
+            request.send()
+        };
+    </script>
+</html>
