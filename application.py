@@ -12,18 +12,6 @@ quotes.append(["Carry out a random act of kindness, with no expectation of rewar
 
 quotes.append(["Together we can change the world, just one random act of kindness at a time.",0])
 
-quotes.append(["We can all fight against loneliness by engaging in random acts of kindness." ,0])
-
-quotes.append(["Sometimes in life, random things can blind-side you.",0])
-
-quotes.append(["Creativity is the process of having original ideas that have value. It is a process; it's not random.",
-               0])
-
-quotes.append(["In all natural disasters through time, man needs to attach meaning to tragedy, no matter how random "
-               "and inexplicable the event is.",0])
-
-quotes.append(["Love is a beautiful feeling.",0])
-
 rd.seed(1)
 
 
